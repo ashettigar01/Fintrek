@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fintrek — Finance Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #080c14; color: #fff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+      input, select, button, textarea { font-family: inherit; }
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
+      /* Theme-aware native controls */
+      body.theme-dark  { color-scheme: dark; }
+      body.theme-light { color-scheme: light; }
+
+      /* Dark theme: keep dark calendar icon */
+      body.theme-dark input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1) opacity(0.4); cursor: pointer;
+      }
+      /* Light theme: calendar icon should be dark naturally */
+      body.theme-light input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: none; cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="theme-dark">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
